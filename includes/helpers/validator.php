@@ -22,3 +22,18 @@ function validate_register_input($name, $email, $password, $confirm_password) {
 
     return $errors;
 }
+
+function validateLogin($email, $password)
+{
+    $errors = [];
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "Invalid email format.";
+    }
+
+    if (empty($password)) {
+        $errors['password'] = "Password is required.";
+    }
+
+    return $errors;
+}
