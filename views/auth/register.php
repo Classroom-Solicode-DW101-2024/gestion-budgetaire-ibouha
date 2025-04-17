@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include "../partials/header.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +29,6 @@
 </head>
 
 <body class="antialiased bg-cream">
-    <?php include "../partials/header.php"; ?>
 
     <div class="min-h-screen flex items-center justify-center px-4">
         <div class="max-w-md w-full" data-aos="fade-up" data-aos-duration="1000">

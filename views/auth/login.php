@@ -1,8 +1,3 @@
-<?php session_start(); {
- 
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +47,7 @@
             <input type="email" id="email" name="email"
               value="<?php echo $_SESSION['old_login']['email'] ?? ''; ?>"
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition"
-              placeholder="Enter your email" required />
+              placeholder="Enter your email"  />
             <?php if (isset($_SESSION['login_errors']['email'])): ?>
               <p class="text-red-500 text-sm mt-1"><?php echo $_SESSION['login_errors']['email']; ?></p>
             <?php endif; ?>

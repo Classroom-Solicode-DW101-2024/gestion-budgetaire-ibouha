@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,8 @@
 </head>
 
 <body class="antialiased">
-    <?php include "./partials/header.php" ?>
+    <?php include "./partials/header.php" ;?>
+
     <div class="bg-cream">
         <div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row">
             <!--Left Col-->

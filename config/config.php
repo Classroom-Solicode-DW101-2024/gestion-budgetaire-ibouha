@@ -1,19 +1,12 @@
 <?php
 $host = 'localhost';
-$db   = 'spendwise';
-$user = 'root';
-$pass = ''; // change this if you set a password
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
+$dbname = 'spendwise';
+$user = 'root'; // change if different
+$pass = '';     // change if you set a password
 
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    die('Database connection failed: ' . $e->getMessage());
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
 }
