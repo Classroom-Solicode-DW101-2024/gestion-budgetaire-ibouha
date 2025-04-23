@@ -1,8 +1,5 @@
 <!-- navbar -->
-<?php
-session_start();
 
-?>
 <header x-data="{ open: false }" class="w-full text-gray-700 bg-cream">
     <div data-aos="fade-down" data-aos-duration="1500" class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
         <div class="flex flex-row items-center justify-between py-3">

@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    session_start();
     $_SESSION['register_errors'] = $errors;
     $_SESSION['old_data'] = ['full_name' => $name, 'email' => $email];
 

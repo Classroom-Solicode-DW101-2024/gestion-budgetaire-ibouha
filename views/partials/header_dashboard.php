@@ -1,6 +1,7 @@
 <!-- navbar -->
 <?php
-session_start();
+include "../../config/config.php" ;
+$current = basename($_SERVER['PHP_SELF']);
 
 ?>
 <link rel="stylesheet" href="../../public/style/landing.css">
@@ -8,7 +9,7 @@ session_start();
     <div data-aos="fade-down" data-aos-duration="1500" class="flex max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
         <div class="flex flex-row items-center justify-between py-4">
             <div class="relative <?php echo isset($_SESSION['user']) ? 'md:mt-0' : 'md:mt-8'; ?>">
-                <a href="/gestion-budgetaire-ibouha/" class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">SpendWise</a>
+                <a href="./dashboard.php" class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">SpendWise</a>
                 <svg class="h-11 z-40 absolute -top-2 -left-3" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M35.2574 2.24264C37.6005 -0.100501 41.3995 -0.100505 43.7426 2.24264L76.7574 35.2574C79.1005 37.6005 79.1005 41.3995 76.7574 43.7426L43.7426 76.7574C41.3995 79.1005 37.6005 79.1005 35.2574 76.7574L2.24264 43.7426C-0.100501 41.3995 -0.100505 37.6005 2.24264 35.2574L35.2574 2.24264Z" fill="#65DAFF" />
                 </svg>
@@ -21,8 +22,9 @@ session_start();
             </button>
         </div>
         <nav class="h-full flex justify-center items-center font-bold text-gray-600 gap-5">
-            <a href="" class="py-4 border-b-4 border-yellow-500 text-yellow-500">Dashboard</a>
-            <a href="" class="py-4">Budgets</a>
+            <a href="./dashboard.php" class="py-4 <?= $current === 'dashboard.php' ? 'text-yellow-500 border-b-4 border-yellow-500' : '' ?>">Dashboard</a>
+            <a href="./transactions.php" class="py-4 <?= $current === 'transactions.php' ? 'text-yellow-500 border-b-4 border-yellow-500' : '' ?>">Budgets</a>
+            <a href="./categories.php" class="py-4 <?= $current === 'categories.php' ? 'text-yellow-500 border-b-4 border-yellow-500' : '' ?>">Categories</a>
         </nav>
             <!-- Dropdown Container -->
             <div class="relative inline-block text-left" id="menu-dropdown">

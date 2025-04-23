@@ -3,7 +3,6 @@ require_once '../config/config.php';
 require_once '../includes/helpers/validator.php';
 require_once '../includes/functions/user.php';
 
-session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
